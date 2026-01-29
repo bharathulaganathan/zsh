@@ -1,26 +1,22 @@
 # zsh config file
 
-# install zsh
+### install zsh
 sudo pacman -S zsh
 
-# create symbolic link to .config/zsh
+### create symbolic link to .config/zsh
+```sh
 ln -s ~/.config/zsh/.zshrc ~/.zshrc
+```
 
-# set zsh as default
-chsh -s $(which zsh)
-# OR
+### set zsh as default
+```sh
 chsh -s /usr/bin/zsh
-
-# install starship
-curl -sS https://starship.rs/install.sh | sh
 # OR
-sudo pacman -S starship
+chsh -s $(which zsh)
+```
 
-# create starship config
-mkdir -p ~/.config/starship  && touch ~/.config/starship/starship.toml
-
-# change starship config location
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
+### Install and setup Starship
+https://github.com/bharathulaganathan/starship
 
 # install zinit
 bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
