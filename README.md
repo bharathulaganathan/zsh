@@ -15,6 +15,11 @@ chsh -s /usr/bin/zsh
 chsh -s $(which zsh)
 ```
 
+### Get this config
+```sh
+git clone https://github.com/bharathulaganathan/zsh ~/.config/zsh
+```
+
 ### Install and setup Starship
 https://github.com/bharathulaganathan/starship
 
