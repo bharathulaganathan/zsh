@@ -41,7 +41,11 @@ compinit -C
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
-HISTFILE=~/.config/zsh_hist/.histfile
+# Ensure history directory exists
+HISTDIR="$HOME/.config/zsh_hist"
+[[ -d "$HISTDIR" ]] || mkdir -p "$HISTDIR"
+
+HISTFILE="$HISTDIR/.histfile"
 HISTSIZE=50000
 SAVEHIST=50000
 HISTDUP=erase
