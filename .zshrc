@@ -8,9 +8,6 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 
-# Compinit
-autoload -Uz compinit
-compinit -C
 
 
 # Plugins
@@ -35,6 +32,10 @@ zinit light zsh-users/zsh-history-substring-search
 # OR
 # https://github.com/zdharma-continuum/fast-syntax-highlighting
 zinit light zdharma-continuum/fast-syntax-highlighting
+
+# Compinit
+autoload -Uz compinit
+compinit -C
 
 # Init fzf-tab
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
