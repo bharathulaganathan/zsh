@@ -1,16 +1,16 @@
 # ZSH Config File
 
-### Install ZSH
+## Install ZSH
 ```sh
 sudo pacman -S zsh
 ```
 
-### Create Symbolic Link to .config/zsh
+## Create Symbolic Link to .config/zsh
 ```sh
 ln -s ~/.config/zsh/.zshrc ~/.zshrc
 ```
 
-### Set ZSH as Default
+## Set ZSH as Default
 ```sh
 chsh -s /usr/bin/zsh
 ```
@@ -19,15 +19,15 @@ OR
 chsh -s $(which zsh)
 ```
 
-### Get this Config
+## Get this Config
 ```sh
 git clone https://github.com/bharathulaganathan/zsh ~/.config/zsh
 ```
 
-### Install and Setup Starship
+## Install and Setup Starship
 https://github.com/bharathulaganathan/starship
 
-### Reload ZSH
+## Reload ZSH
 ```sh
 exec zsh
 ```
