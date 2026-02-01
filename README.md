@@ -27,12 +27,12 @@ git clone https://github.com/bharathulaganathan/zsh ~/.config/zsh
 ## Install Dependencies
 ### Arch Linux
 ```sh
-#fzf
+# fzf
 sudo pacman -S fzf
 ```
 ### Direct Install
 ```sh
-#fzf
+# fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
