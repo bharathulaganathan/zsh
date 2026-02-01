@@ -24,6 +24,19 @@ chsh -s $(which zsh)
 git clone https://github.com/bharathulaganathan/zsh ~/.config/zsh
 ```
 
+## Install Dependencies
+### Arch Linux
+```sh
+#fzf
+sudo pacman -S fzf
+```
+### Direct Install
+```sh
+#fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+
 ## Install and Setup Starship
 https://github.com/bharathulaganathan/starship
 
