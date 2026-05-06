@@ -10,11 +10,21 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Plugins
 
-# Starship
-# Config location
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
-# Init
-eval "$(starship init zsh)"
+# Load starship theme
+# line 1: `starship` binary as command, from github release
+# line 2: starship setup at clone(create init.zsh, completion)
+# line 3: pull behavior same as clone, source init.zsh
+zinit ice as"command" from"gh-r" \
+    bpick"starship-x86_64-unknown-linux-gnu.tar.gz" \
+    atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+    atpull"%atclone" src"init.zsh"
+zinit light starship/starship
+
+# # Starship
+# # Config location
+# export STARSHIP_CONFIG=~/.config/starship/starship.toml
+# # Init
+# eval "$(starship init zsh)"
 
 # https://github.com/jeffreytse/zsh-vi-mode
 zinit ice depth=1
